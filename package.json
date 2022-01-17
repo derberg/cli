@@ -75,8 +75,7 @@
     "/bin",
     "/lib",
     "/assets",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
+    "/npm-shrinkwrap.json"
   ],
   "homepage": "https://github.com/asyncapi/cli",
   "keywords": [
@@ -128,7 +127,6 @@
     "generate:readme:toc": "markdown-toc -i README.md",
     "lint": "eslint --max-warnings 0 --config .eslintrc .",
     "lint:fix": "eslint --max-warnings 5 --config .eslintrc . --fix",
-    "postpack": "rimraf oclif.manifest.json",
     "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "prepublishOnly": "npm run build",
     "pretest": "npm run build",
