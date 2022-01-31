@@ -26,10 +26,7 @@ export default class ContextTestingHelper {
   }
 
   createDummyContextFile(): void {
-    if (existsSync(DEFAULT_CONTEXT_FILE_PATH)) {
-      accessSync(DEFAULT_CONTEXT_FILE_PATH, constants.R_OK | constants.W_OK); // checks if the file is readable and writable.
-    }
-    writeFileSync(DEFAULT_CONTEXT_FILE_PATH, JSON.stringify(this._context), { encoding: 'utf-8', flag: 'w+' });
+    writeFileSync(DEFAULT_CONTEXT_FILE_PATH, JSON.stringify(this._context), { encoding: 'utf-8' });
   }
 
   deleteDummyContextFile(): void {
